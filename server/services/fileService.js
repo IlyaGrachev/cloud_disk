@@ -20,6 +20,19 @@ class FileService {
         }))
     }
 
+	deleteFile(file) {
+		const path = this.getpath(file)
+		if(file.type === 'dir'){
+			fs.rmdirSync(path)
+		} else {
+			fs.unlinkSync(path)
+		}
+	}
+
+	getpath(file){
+		return config.get('filePath') + "\\" + file.user + "\\" + file.path
+	}
+
 }
 
 
