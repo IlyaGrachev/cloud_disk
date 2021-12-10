@@ -4,7 +4,7 @@ import { createDir, getFiles, uploadFile } from "../../actions/file";
 import FileList from "./fileList/FileList";
 import './disk.css';
 import Popup from "./Popup";
-import { setCurrentDir, setPopupDisplay } from "../../redusers/fileReducer";
+import { setCurrentDir, setPopupDisplay, setView } from "../../redusers/fileReducer";
 import Uploader from "./uploader/Uploader";
 
 const Disk = () => {
@@ -13,6 +13,7 @@ const Disk = () => {
 	const dirStack = useSelector(state => state.files.dirStack)
 	const [dragEnter, setDragEnter] = useState(false)
 	const [sort, setSort] = useState('type')
+	const loader = useSelector(state => state.app.loader)
 
 	useEffect(() => {
 		dispatch(getFiles(currentDir, sort))
@@ -52,6 +53,14 @@ const Disk = () => {
 		setDragEnter(false)
 	}
 
+	if(loader){
+		return(
+			<div className="loader">
+				<div className="lds-circle"><div></div></div>
+			</div>
+		)
+	}
+
 
 
 	return (!dragEnter ?
@@ -72,6 +81,8 @@ const Disk = () => {
 					<option value="type">По типу</option>
 					<option value="date">По дате</option>
 				</select>
+				<button className="disk__plate" onClick={()=> dispatch(setView('plate'))}/>
+				<button className="disk__list" onClick={()=> dispatch(setView('list'))}/>
 			</div>
 			<FileList />
 			<Popup />
