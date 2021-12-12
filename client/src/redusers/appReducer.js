@@ -1,7 +1,6 @@
 const SHOW_LOADER = "SHOW_LOADER"
 const HIDE_LOADER = "HIDE_LOADER"
 
-
 const defaultState = {
 	loader: false
 }
