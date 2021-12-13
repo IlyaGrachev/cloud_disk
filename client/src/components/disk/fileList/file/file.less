@@ -22,8 +22,15 @@
     grid-column-start: 6;
     justify-self: center;
   }
+
   &__btn {
     display: none;
+	border: 2px solid #566885;
+	border-radius: 20px;
+	cursor: pointer;  
+	min-width: 70px;
+	min-height: 30px;
+	border-radius: 20px;
   }
 
   &:hover &__date {
@@ -34,11 +41,15 @@
   }
   &:hover &__download {
     grid-column-start: 5;
-    display: block;
+    display: flex;
+	background: no-repeat center center;
+	background-image: url(../../../../assets/img/download_btn.svg);
   }
   &:hover &__delete {
     grid-column-start: 6;
-    display: block;
+    display: flex;
+	background: no-repeat center center;
+	background-image: url(../../../../assets/img/delete_btn.svg);
   }
 }
 
@@ -58,7 +69,31 @@
 	&__btns {
 		display: none;
 	}
+
 	&:hover &__btns{
 		display: flex;
+		flex-direction: column;
+	}
+
+	&:hover &__delete{
+		margin: 5px auto;
+		border: 2px solid #566885;
+		cursor: pointer;  
+		min-width: 70px;
+		min-height: 30px;
+		border-radius: 20px;
+		background: no-repeat center center;
+		background-image: url(../../../../assets/img/delete_btn.svg);
+	}
+
+	&:hover &__download{
+		margin: 5px auto;
+		border: 2px solid #566885;
+		cursor: pointer;  
+		min-width: 70px;
+		min-height: 30px;
+		border-radius: 20px;
+		background: no-repeat center center;
+		background-image: url(../../../../assets/img/download_btn.svg);
 	}
 }

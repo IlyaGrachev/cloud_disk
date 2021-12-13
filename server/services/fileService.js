@@ -29,9 +29,9 @@ class FileService {
 		}
 	}
 
-	getpath(file){
-		return config.get('filePath') + "\\" + file.user + "\\" + file.path
-	}
+    getPath(file) {
+        return config.get('filePath') + '\\' + file.user + '\\' + file.path
+    }
 
 }
 

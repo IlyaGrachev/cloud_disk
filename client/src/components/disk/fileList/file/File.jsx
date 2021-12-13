@@ -39,9 +39,9 @@ const File = ({ file }) => {
 				<div className="file__size">{sizeFormat(file.size)}</div>
 				{file.type !== 'dir' && <button onClick={(event) => downloadClickHandler(event)}
 					className='file__btn file__download'>
-					Скачать
+					
 				</button>}
-				<button className='file__btn file__delete' onClick={(event) => deleteClickHandler(event)}>Удалить</button>
+				<button className='file__btn file__delete' onClick={(event) => deleteClickHandler(event)}></button>
 			</div>
 		)
 	}
@@ -55,11 +55,11 @@ const File = ({ file }) => {
 				<div className="file-plate__btns">
 					{file.type !== 'dir' && <button onClick={(event) => downloadClickHandler(event)}
 						className='file-plate__btn file-plate__download'>
-						Скачать
+						
 					</button>}
 					<button className='file-plate__btn file-plate__delete'
 						onClick={(event) => deleteClickHandler(event)}>
-						Удалить
+						
 					</button>
 				</div>
 

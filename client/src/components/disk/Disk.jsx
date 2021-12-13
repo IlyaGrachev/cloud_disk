@@ -70,13 +70,13 @@ const Disk = () => {
 			onDragOver={dragEnterHandler}>
 
 			<div className="disk__btns">
-				<button className="disk__back" onClick={() => backClickHandler()}>Назад</button>
+				<button className="disk__back" onClick={() => backClickHandler()}></button>
 				<button className="disk__create" onClick={() => showPopupHandler()}>Создать папку</button>
 				<div className="disk__upload">
-					<label htmlFor="disk__upload-input" className="disk__upload-label">Загрузить файл</label>
+					<label htmlFor="disk__upload-input" className="disk__upload-label"></label>
 					<input multiple={true} onChange={(event) => fileUploadHandler(event)} type="file" id='disk__upload-input' className="disk__upload-input" />
 				</div>
-				<select value={sort} onChange={(e) => setSort(e.target.value)} className='disk__select'>
+				<select  value={sort} onChange={(e) => setSort(e.target.value)} className='disk__select'>
 					<option value="name">По имени</option>
 					<option value="type">По типу</option>
 					<option value="date">По дате</option>
