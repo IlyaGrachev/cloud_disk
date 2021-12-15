@@ -48,11 +48,16 @@ const Navbar = () => {
 
 				{!isAuth && <div className="navbar__login"><NavLink to="/login">Войти</NavLink></div>}
 				{!isAuth && <div className="navbar__registration"><NavLink to="/registration">Регистрация</NavLink></div>}
+
 				{isAuth && <div className="navbar__login" onClick={() => dispatch(logout())}>Выйти</div>}
 
 				{isAuth && <NavLink to='/profile'>
 					<img className="navbar__avatar" src={avatar} alt='' />
 				</NavLink>}
+				{isAuth && <NavLink to='/profile'>
+					<div className="navbar__username">{currentUser.email}</div>
+				</NavLink>}
+
 			</div>
 		</div>
 	);

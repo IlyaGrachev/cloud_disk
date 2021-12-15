@@ -1,0 +1,71 @@
+@import "../../utils/colors";
+
+.profile{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__btns{
+		display: flex;
+		width: 100%;
+		padding: 20px 0px;
+	}
+
+	&__username{
+		font-size: 20px;
+	}
+
+	&__back{
+    	cursor: pointer;
+		min-width: 70px;
+		min-height: 30px;
+		border-radius: 20px;
+		border: 2px solid @font-color;
+		background: no-repeat center center;
+		background-image: url("../../assets/img/back_btn.svg");
+	}
+
+	&__avatar{
+		margin-top: 10px;
+		width: 400px;
+		height: 400px;
+		border-radius: 50%;
+	}
+
+	&__delete{
+		margin-top: 10px;
+		background: no-repeat center center;
+		border: 2px solid #566885;
+		border-radius: 20px;
+		cursor: pointer;  
+		min-width: 70px;
+		min-height: 30px;
+		border-radius: 20px;
+		background-image: url('../../assets/img/delete_btn.svg');
+	}
+
+	&__upload-input {
+		display: none;
+	}
+
+	&__upload-label {
+		margin-top: 10px;
+		display: flex;
+		min-width: 70px;
+		min-height: 30px;
+		padding: 5px 10px;
+		border: 2px solid @font-color;
+    	padding: 5px 10px;
+    	cursor: pointer;
+		background: no-repeat center center;
+		background-image: url("../../assets/img/upload_btn.svg");
+		min-width: 70px;
+		min-height: 30px;
+		border-radius: 20px;
+	}
+
+
+
+
+}
