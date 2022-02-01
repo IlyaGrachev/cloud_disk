@@ -1,6 +1,6 @@
 {
 	"serverPort": 5000,
-	"dbUrl": "mongodb+srv://Grachev2021:gray92ya@cloud.gimc3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+	"dbUrl": "mongodb+srv://<yourNickNameDBCluster>:<yourPass>.gimc3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
 	"secretKey": "mern-secket-key",
 	"filePath": "A:\\PORTFOLIO\\MERN_cloud_disk\\server\\files",
 	"staticPath": "A:\\PORTFOLIO\\MERN_cloud_disk\\server\\static"
